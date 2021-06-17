@@ -5,6 +5,11 @@ import NewExpense from './components/NewExpense/NewExpense'
 
 function App() {
 
+  const addExpense = (expense) => {
+    console.log('In app.js')
+    console.log(expense)
+  }
+
   const expenses = [
     {
       id: 'e1',
@@ -33,7 +38,7 @@ function App() {
   ];
   return (
     <div>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpense} />
       <Expenses data={expenses} /> 
     </div>
     
