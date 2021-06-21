@@ -5,7 +5,7 @@ import './Expenses.css'
 import ExpenseFilter from './ExpenseFilter'
 
 function Expenses(props) {
-    const [date, setDate] = useState('2019')
+    const [date, setDate] = useState('2016')
     
     const filteredExpenses = props.data.filter((expense) => {
         return expense.date.getFullYear().toString() === date
